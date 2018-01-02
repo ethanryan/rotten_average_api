@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+url_1 = Url.create([
+  url: "https://www.rottentomatoes.com/m/the_dark_knight"
+])
