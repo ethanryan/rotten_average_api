@@ -10,3 +10,7 @@
 url_1 = Url.create([
   url: "https://www.rottentomatoes.com/m/the_dark_knight"
 ])
+
+url_2 = Url.create([
+  url: "https://www.rottentomatoes.com/m/it_comes_at_night"
+])
