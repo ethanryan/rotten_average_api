@@ -5,11 +5,10 @@ class Url < ApplicationRecord
   #link = "https://www.rottentomatoes.com/tv/black_mirror"
 
   #link = "https://www.rottentomatoes.com/m/insidious_the_last_key"
-
-
+  
   def parseHTML(link)
     require 'open-uri'
-    doc = Nokogiri::HTML( open(link) ) #problem with this line??? why does this work in postman but not in rails / react
+    doc = Nokogiri::HTML( open(link) )
 
     title = doc.title
     puts "doc title is: " + title
@@ -20,12 +19,10 @@ class Url < ApplicationRecord
     self.movie_or_tv = movie_or_tv
 
     tomato_meter = doc.css("span.superPageFontColor")[0]
-    #tomato_meter = tomato_meter.split("<span class=\"meter-value superPageFontColor\"><span>")[1].split("</span>")[0]
     puts "tomato_meter is: " + tomato_meter
     self.tomato_meter = tomato_meter
 
     audience_score = doc.css("span.superPageFontColor")[12] ? doc.css("span.superPageFontColor")[12] : "null"
-    #audience_score.split("<span class=\"superPageFontColor\" style=\"vertical-align:top\">")[1].split("%")[0]
     puts "audience_score is: " + audience_score
     self.audience_score = audience_score
   end
@@ -42,6 +39,15 @@ class Url < ApplicationRecord
     if self.audience_score.include?("superPageFontColor")
       self.audience_score = audience_score.split("<span class=\"superPageFontColor\" style=\"vertical-align:top\">")[1].split("%")[0]
     end
+  end
+
+  def parse_and_fix(link)
+    self.parseHTML(link)
+    self.save
+    self.fix_title
+    self.fix_tomato_meter
+    self.fix_audience_score
+    self.save
   end
 
 end
