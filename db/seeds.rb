@@ -6,20 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-url_1 = Url.create([
-  link: "https://www.rottentomatoes.com/m/the_dark_knight"
-])
-
-#url_1.parseHTML(url_1.link)
-
-url_2 = Url.create([
-  link: "https://www.rottentomatoes.com/m/it_comes_at_night"
-])
-
-url_3 = Url.create([
-  link: "https://www.rottentomatoes.com/m/hulk/"
-])
-
-url_4 = Url.create([
-  link: "https://www.rottentomatoes.com/tv/black_mirror"
-])
+# url_1 = Url.create([
+#   link: "https://www.rottentomatoes.com/m/the_dark_knight"
+# ])
+#
+# url_2 = Url.create([
+#   link: "https://www.rottentomatoes.com/m/it_comes_at_night"
+# ])
+#
+# url_3 = Url.create([
+#   link: "https://www.rottentomatoes.com/m/hulk/"
+# ])
+#
+# url_4 = Url.create([
+#   link: "https://www.rottentomatoes.com/tv/black_mirror"
+# ])
