@@ -1,30 +1,27 @@
-RottenAverage takes a Rotten Tomatoes url as input and returns that movie or TV show's average rating.
+Rotten Average takes a Rotten Tomatoes URL as input and returns the average score of that movie or TV show season.
 
-(TomatoMeter + Audience Score) / 2 = Average Rating
+(Tomato Meter + Audience Score) / 2 = Rotten Average
 
-RottenAverage was built with a Ruby on Rails backend including a PostgreSQL database and a React frontend. 
+Rotten Average was built with a Ruby on Rails backend including a PostgreSQL database and a React frontend.
 
-# README
+Instructions for downloading:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+fork project
 
-Things you may want to cover:
+run bundle install and bundle update
 
-* Ruby version
+make sure Nokogiri has been installed
 
-* System dependencies
+run server with rails s
 
-* Configuration
+should be able to view localhost:3000/urls (will be an empty array)
 
-* Database creation
+then, to see app locally:
 
-* Database initialization
+fork React frontend and follow instructions here:
 
-* How to run the test suite
+https://github.com/ethanryan/rotten_average_client
 
-* Services (job queues, cache servers, search engines, etc.)
+Gif of app in action:
 
-* Deployment instructions
-
-* ...
+![demo-gif](https://media.giphy.com/media/3oFzm2yBemy3GJybYc/giphy.gif)
