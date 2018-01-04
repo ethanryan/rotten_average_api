@@ -1,18 +1,21 @@
 class Url < ApplicationRecord
 
-  #url = "https://www.rottentomatoes.com/m/hulk/"
-  #url = "https://www.rottentomatoes.com/m/it_comes_at_night/"
-  #url = "https://www.rottentomatoes.com/tv/black_mirror"
+  #link = "https://www.rottentomatoes.com/m/hulk/"
+  #link = "https://www.rottentomatoes.com/m/it_comes_at_night/"
+  #link = "https://www.rottentomatoes.com/tv/black_mirror"
 
-  def parseHTML(url)
+  #link = "https://www.rottentomatoes.com/m/insidious_the_last_key"
+
+
+  def parseHTML(link)
     require 'open-uri'
-    doc = Nokogiri::HTML( open(url) )
+    doc = Nokogiri::HTML( open(link) ) #problem with this line??? why does this work in postman but not in rails / react
 
     title = doc.title
     puts "doc title is: " + title
     self.title = title
 
-    movie_or_tv = url.split(".com/")[1].split("/")[0]
+    movie_or_tv = link.split(".com/")[1].split("/")[0]
     puts "movie_or_tv is: " + movie_or_tv
     self.movie_or_tv = movie_or_tv
 
