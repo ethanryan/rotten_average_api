@@ -3,9 +3,8 @@ class Url < ApplicationRecord
   #link = "https://www.rottentomatoes.com/m/hulk/"
   #link = "https://www.rottentomatoes.com/m/it_comes_at_night/"
   #link = "https://www.rottentomatoes.com/tv/black_mirror"
-
   #link = "https://www.rottentomatoes.com/m/insidious_the_last_key"
-  
+
   def parseHTML(link)
     require 'open-uri'
     doc = Nokogiri::HTML( open(link) )
