@@ -4,6 +4,12 @@ Rotten Average takes a Rotten Tomatoes URL as input and returns the average scor
 
 Rotten Average was built with a Ruby on Rails backend including a PostgreSQL database and a React frontend.
 
+Visit the Rotten Average app here:
+
+https://rotten-average-client.herokuapp.com/
+
+
+
 Instructions for downloading:
 
 fork project
